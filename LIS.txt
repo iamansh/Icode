@@ -1,0 +1,49 @@
+                              LONGEST INCREASING SUBSEQUENCE
+                                                    By Ansh Srivastava
+
+Tabulation(Bottom-up):
+       
+         lis[0] lis[1] lis[2] lis[3] lis[4] lis[5] lis[6]  lis[7] 
+lis[8] =    1     2      2      2      3     10      12    40 <----too large!
+
+
+          arr[0] arr[1] arr[2] arr[3] arr[4] arr[5] arr[6] arr[7]
+arr[] = { 10,    22,     9,    33,     21,     50,   41,    60 };
+
+
+i=1 < 8, j=0 < 1
+  2 < 8    1 < 1
+  3 < 8    0 < 2
+  4 < 8    1 < 2
+  5 < 8    2 < 2
+  6 < 8    0 < 3
+  7 < 8    1 < 3
+           2 < 3
+           3 < 3
+           0 < 4
+           1 < 4
+           2 < 4
+           3 < 4
+           4 < 4
+           0 < 5
+           1 < 5
+           2 < 5
+           3 < 5
+           4 < 5
+           5 < 5
+           0 < 6
+           1 < 6
+           2 < 6
+           3 < 6
+           4 < 6
+           5 < 6
+           6 < 6
+           0 < 7
+   if(arr[6] > arr[])
+          lis[6] = lis[5]+1
+
+Here,(&& lis[i] < lis[j] + 1) not used deliberately. To check what will be the 
+impact on result with or without takin it to the concern.
+
+
+

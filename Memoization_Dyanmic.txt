@@ -1,0 +1,24 @@
+                                BREAKDOWN OF MEMOIZATION METHOD OF DYNAMIC PROGRAMMING
+                                                                                      by Ansh Srivastava                                               	   
+	Fibonacci series
+
+lookup[100]
+lookup[0][1][2]......[99]   
+      -1 -1 -1        -1			     
+
+fib(5)
+if lookup[5] is -1
+
+                                     lookup[5] = fib(5-1) + fib(5-2)
+lookup[4] =               fib(4)                                         lookup[3] =       fib(3)
+  lookup[3] =     fib(3)          fib(2)                             lookup[2] =    fib(2)        fib(1)
+lookup[2] =   fib(2)  fib(1)   fib(1)  fib(0)	                  lookup[1] =   fib(1)  fib(0) 
+lookup[1]= fib(1) fib(0)         
+
+INITIALISATION part 
+lookup[0] = 0
+lookup[1] = 1
+lookup[2] = 1
+lookup[3] = 2
+lookup[4] = 3
+lookup[5] = 5 <-Answer

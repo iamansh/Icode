@@ -1,0 +1,45 @@
+                                                 DIFFERENCE BETWEEN TABULATION AND MEMOIZATION
+                                                                 By Ansh Srivastava
+Ex:
+ arr[] 10 22 9 33 21 50 41 60 80
+ LIS   1  2    3     4     5  6
+
+Will go with overlapping, coz optimal is too lengthy to grasp:
+
+Overlapping is very 1st technique in DP, continue.....
+Overlapping consists of two techniques:1-memoization  2-Tabulation
+Memoization is ur Top down approach while Tabulation is bottom up!
+
+---->factorial of a NO:
+
+dp[0]=1
+dp[1]=dp[0]*1=1			<-Bottom up!(TABULATION)
+dp[2]=dp[1]*2=2
+dp[3]=dp[2]*3=6
+dp[4]=dp[3]*4=24
+dp[5]=dp[4]*5=120 and done!
+
+Let’s describe a state for our DP problem to be dp[x] with dp[0] as 
+base state and dp[n] as our destination state. So,  we need to find 
+the value of destination state i.e dp[n].
+
+
+Now we're goin' to hop over Memoization(Don't u remember i used it in Fibona
+cci series)--->
+
+
+dp[100]=-1
+dp[1] = 1
+solve(5)
+dp[5] = 5 * solve(4)
+dp[4] = 4 * solve(3)
+dp[3] = 3 * solve(2)
+dp[2] = 2 * solve(1)
+dp[1] = 1 * solve(0)
+	1 * 1 
+
+If we need to find the value for some state say dp[n] and instead of starting 
+from the base state that i.e dp[0] we ask our answer from the states that can 
+reach the destination state dp[n] following the state transition relation, 
+then it is the top-down fashion of DP.
+     
