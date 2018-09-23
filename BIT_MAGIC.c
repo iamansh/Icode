@@ -1,16 +1,22 @@
- Count set bits in integer
+Count set bits in integer
 
-int countSetBits(int x)
-{
-    int count = 0;
-    while (x)
-    {
-        x &= (x-1);
-        count++;
-    }
-    return count;
-}
+Loop through all bits in an integer, check if a bit is set and if it is then increment the set bit count. See below program.
 
+def  countSetBits(n):
+    count = 0
+    while (n):
+        count += n & 1
+        n >>= 1
+    return count
+i = 9
+print(countSetBits(i))
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  Checking if given 32 bit integer is power of 2
 
 int isPowerof2(int x)
@@ -28,8 +34,10 @@ x – 1 = 15(00001111)
 x & (x-1) = 0
 so 16 is power of 2
 
+ 
+ 
 
-1.Lower to Upper Case
+Lower to Upper Case
 This method simply subtracts a value of 32 from the ASCII value of lowercase letter by 
 Bitwise ANDing (&) with negation (~) of 32 converting the letter to uppercase.
 
@@ -60,7 +68,7 @@ int main()
 
 
 
-2.Upper to Lower Case
+Upper to Lower Case
 Similarly, it adds a value of 32 to the ASCII value of uppercase letter by Bitwise ORing (|) with 32 converting the letter to lowercase.
 
 
