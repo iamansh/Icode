@@ -30,3 +30,39 @@ int main(){
     }
 }
    
+Ok! ok!, don't do such mess with that. Here is the awesome one:-)
+    
+#include<iostream>
+#include<cctype>//toupper()
+#include<cstring>
+#include<algorithm>//sort()
+using namespace std;
+int cntL[100], cntR[100];
+
+void isLapin(string s){
+    int n = s.length();
+    int iter = n/2;
+    int iter2 = iter; //if even
+    if(n%2)
+      iter2++;// if odd then increase iter by one
+    string s1 = s.substr(0, iter);
+    string s2 = s.substr(iter2, n);
+    sort(s1.begin(), s1.end());
+    sort(s2.begin(), s2.end());
+    if(s1 == s2)
+        cout<<"YES"<<endl;
+    else 
+        cout<<"NO"<<endl;
+    
+}
+
+int main(){
+    int T;
+    cin>>T;
+    while(T--){
+      string s;
+      cin>>s;
+      isLapin(s);
+    }
+}
+   
