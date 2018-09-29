@@ -70,4 +70,32 @@ int main(){
 }
    Execution time: 0.00s
    
-   
+ Pyhton 3.6:-
+     
+def isLapin(s):
+    n, s1, s2 = len(s), [], []
+    iter = n//2
+    iter2 = iter
+    for j in range(0, iter):
+        s1.append(s[j])
+    if n%2!=0:
+        iter2+=1
+        for j in range(iter2, n):
+            s2.append(s[j])
+    else:
+        for j in range(iter2, n):
+            s2.append(s[j])
+    s1.sort()
+    s2.sort()
+    if(s1==s2):
+        print("YES")
+    else:
+        print("NO")
+        
+
+T = int(input())
+for i in range(0, T):
+    s = list(input())
+    isLapin(s)
+        
+Execution time: 0.04s        
