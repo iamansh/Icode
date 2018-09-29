@@ -1,0 +1,13 @@
+def isLapin(s):
+    n = len(s)
+    iter = (int)n/2
+    iter2 = iter
+    if iter2%2:
+        iter2+=1
+    s1 = s[0:iter]
+    s2 = s[iter2:n]
+    s1.sort()
+    s2.sort()
+ 
+ Tip..
+ Typecast that particular value(int), or floor division it
