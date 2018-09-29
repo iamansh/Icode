@@ -98,4 +98,4 @@ for i in range(0, T):
     s = list(input())
     isLapin(s)
         
-Execution time: 0.04s        
+Execution time: 0.04seconds       
